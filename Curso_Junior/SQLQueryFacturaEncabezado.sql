@@ -13,5 +13,6 @@ CREATE TABLE facturaEncabezado
     usuarioAnulacion VARCHAR(64) NOT NULL,
     estado TINYINT NOT NULL,
     CONSTRAINT pk_facturaEncabezado_codigoFacturaEncabezado PRIMARY KEY CLUSTERED (codigoFacturaEncabezado ASC),
+    CONSTRAINT fk_facturaEncabezado_cliente_codigoCliente FOREIGN KEY (codigoCliente) REFERENCES cliente (codigoCliente)
 )
 GO
